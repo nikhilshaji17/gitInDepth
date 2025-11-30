@@ -1,0 +1,39 @@
+Git = a distributed version control system
+
+At it's core, git is like a key value store
+
+key = the hash of the data. This is a SHA-1 function.
+value = the data to be stored
+
+The data provided will generate a 40 digit hexadecimal number.
+
+This is also called a content addressable storage system, because the content generates the key.
+
+Git stores data via blobs. They contain metadata about the blob itself, the size of the content,
+  the delimiter and the actual content.
+
+Git cannot store empty directories. This is because of a limitation in the staging area.
+
+The reason why we can change branches so fast is because of git's key value storage design.
+  1. A file that has the same content contains the same hash.
+  2. When you switch from one branch to another, instead of having to fetch all the same files again
+      whatever files have the same hash value as the one in your current branch remain the same.
+  3. Files that are new or different are fetched. This way, git can quickly switch branches.
+
+deltas => the changes between the previous version of your file and the new version
+A Packfile stores the new object, and the deltas (the changes from the previous version).
+
+Commits:
+
+A commit points to a tree.
+
+It contains metadata like:
+ 1. The author and commiter
+ 2. The date
+ 3. The message
+ 4. The parent commit.
+
+The sha1 of the commit is the hash of all this info.
+
+The three types of objects are the blob, the tree and the commit.
+
