@@ -35,5 +35,5 @@ It contains metadata like:
 
 The sha1 of the commit is the hash of all this info.
 
-The three types of objects are the blob, the tree and the commit.
+The three types of objects are the blob, the tree and the  commit.
 
