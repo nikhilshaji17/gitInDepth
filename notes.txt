@@ -70,4 +70,10 @@ squash => To take multiple commits (say N), and "squash" them into 1 (or N - 1, 
 
 untracked -> staged -> tracked
 
+remote => The same project repo, somewhere on another computer, from which you can push
+  or pull changes from/to.
+
 git is an acyclic graph. 
+
+The .git folder contains all of the state and information of the git repo.
+
