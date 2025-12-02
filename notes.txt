@@ -49,3 +49,25 @@ u goes one half page up
 /<term> will search for term
 n goes to next search term
 N goes to prev search term
+
+Centralized version control:
+You have your version of a file, which if you check out, can no longer be edited by anyone else,
+  until you check the file in again.
+
+Porcelain commands => high-level and plumbing commands => low-level
+
+Commit = A point in time that represents the project in its entirety.
+A commit represents the entire codebase.
+The SHA is calculated by the author, date, contents of change and more.
+
+Key terms:
+index and staging are 2 interchangeable terms.
+
+When you run git add, the files you add are hashed and stored as objects in the staging area,
+  ready to be commited.
+
+squash => To take multiple commits (say N), and "squash" them into 1 (or N - 1, or N - 2 and so on).
+
+untracked -> staged -> tracked
+
+git is an acyclic graph. 
