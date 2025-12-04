@@ -77,3 +77,39 @@ git is an acyclic graph.
 
 The .git folder contains all of the state and information of the git repo.
 
+ --graph
+           Draw a text-based graphical representation of the commit
+           history on the left hand side of the output. This may cause
+           extra lines to be printed in between commits, in order for the
+           graph history to be drawn properly. Cannot be combined with
+           --no-walk.
+
+The reason we cannot directly cat an object is because it is compressed. Hence, we 
+use the git cat-file command.
+
+INPUT:
+git cat-file -p 297bd49a46927a189d94e7efdae297e073ccd1f8
+
+OUTPUT:
+  tree a40cc902cd0a57eb2f7ee7f756224d2487547863
+  parent d2fdca609f2e7c010f4ec231bb067be205052539
+  author nikhilshaji17 <nikhilshaji17@gmail.com> 1764660181 +0400
+  committer nikhilshaji17 <nikhilshaji17@gmail.com> 1764660181 +0400
+
+
+tree => A tree is a directory, which contains one or more files.
+blob => A blob is a file.
+
+To list out values, say from the config file:
+git config --get-regexp <section-name>
+
+OR 
+
+git config --list | grep <section-name>
+
+git config --get <section-name>.<section-key>
+
+There is a global config file, and a local config file.
+
+You can view the global file with the command:
+git config --list --global
