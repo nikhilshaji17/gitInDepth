@@ -124,6 +124,8 @@ man git-branch
 git branch <branchname>
 
 To delete a branch, use -d or -D.
+git branch = shows you the branches of only your local repo
+git branch -a = shows you all the branches, including the remote repos.
 
 Merge and Rebase:
 Best common ancestor = merge base = The point where the 2 (or more) branches 
@@ -176,4 +178,23 @@ recording a new commit for each. This requires your working tree to be clean
 
 Remote:
 This just means the copy of the repo, somewhere else.
+
+git remote add origin ../helloGit (We write this command from remote-git folder)
+This command makes it such that remote-git now pushes and fetches from helloGit.
+
+upstream => The repo that the workplace has (the source of truth, pull from here)
+
+origin:
+  Case A: When you are working on a personal project, and origin is your remote repo
+    that means origin is your source of truth.
+  Case B: When you are working on a group project (workplace), origin would be your
+    forked repo, and upstream would be source of truth.
+
+Git pull = Git fetch + git merge 
+So when we git fetch, we just update the .git folder
+We still need to merge the changes.
+
+git fetch will fetch all the commits from the remote you have configured.
+
+git pull <remote> <branch>
 
