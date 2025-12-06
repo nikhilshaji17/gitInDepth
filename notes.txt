@@ -232,3 +232,9 @@ With squash:
               EFG          topic
              /
 A - B - C - D              master
+
+Interactive rebasing allows you to edit your messages as well.
+  So now, you can take all your commit, squash them together, and have a single clean message.
+
+If there is a merge conflict, use git status to see what has gone wrong.
+
