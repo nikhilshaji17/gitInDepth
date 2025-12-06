@@ -198,3 +198,37 @@ git fetch will fetch all the commits from the remote you have configured.
 
 git pull <remote> <branch>
 
+Stashing:
+
+The stash is a stack of temporary changes.
+You can make changes in the local repo, stash them, pull changes in from origin, 
+  and then apply the stash to your local repo.
+
+Stash takes every tracked change inside the index (staging area) and the working tree (repo)
+  The command saves your local modifications away and reverts the working directory to match 
+  the HEAD commit.
+
+You can also add a message to your stash, similar to commit:
+  git stash -m "Message here"
+
+To show your stash:
+  git stash list
+
+To get the latest element from the stash:
+  git stash pop 
+  (OR)
+  git stash pop --index <index_number>
+
+Worktree => A copy of your repo, without all the weight of the repo.
+
+"squash" your commits => What is meant by this is interactive rebase squash.
+
+Without squash:
+              E - F - G    topic
+             /
+A - B - C - D              master
+
+With squash:
+              EFG          topic
+             /
+A - B - C - D              master
