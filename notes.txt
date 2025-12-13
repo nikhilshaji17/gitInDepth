@@ -247,4 +247,13 @@ This allows you to record a resolution for a conflict, such that
 Use the command:
 
 git checkout --ours <filename> 
-// This one will keep the file from the repo, 
+// This one will keep the file from our branch
+
+git checkout --theirs <filename>
+// This one will keep their incoming changes
+
+Do not mix merge and rebase. In general, rebase your own branches on your own repo. Merge on public branches.
+
+In case of rebase, git checkout ours will give us their file. This is because we are looking from their perspective.
+In case of merge, git checkout ours will keep our file.
+
