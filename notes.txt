@@ -238,3 +238,13 @@ Interactive rebasing allows you to edit your messages as well.
 
 If there is a merge conflict, use git status to see what has gone wrong.
 
+rerere:
+
+reuse recorded resolutions
+This allows you to record a resolution for a conflict, such that 
+  the next time git comes across the conflict again, it can handle it automatically.
+
+Use the command:
+
+git checkout --ours <filename> 
+// This one will keep the file from the repo, 
