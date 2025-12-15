@@ -127,9 +127,22 @@ To delete a branch, use -d or -D.
 git branch = shows you the branches of only your local repo
 git branch -a = shows you all the branches, including the remote repos.
 
+git checkout has multiple functions, depending on the argument passed to it:
+
+git checkout -b "branch_name" // This creates a new branch 
+git checkout "branch_name" // This switches to a branch
+
+
+We can use git switch to switch branches.
+When you create a new branch, you are actually just pointing to the current commit you are on.
+
 Merge and Rebase:
 Best common ancestor = merge base = The point where the 2 (or more) branches 
   start to diverge.
+
+Merging in Git creates a special commit that has two unique parents. 
+A commit with two parents essentially means 
+"I want to include all the work from this parent over here and this one over here, and the set of all their parents."
 
 
 What rebase does is change where the commit pointer points to. This will change
@@ -257,3 +270,9 @@ Do not mix merge and rebase. In general, rebase your own branches on your own re
 In case of rebase, git checkout ours will give us their file. This is because we are looking from their perspective.
 In case of merge, git checkout ours will keep our file.
 
+HEAD is the symbolic name for the currently checked out commit -- it's essentially what commit you're working on top of.
+Detaching HEAD just means attaching it to a commit instead of a branch. branch = latest commit, detaching HEAD = any earlier commit
+
+Relative commits are powerful, but we will introduce two simple ones here:
+  Moving upwards one commit at a time with ^
+  Moving upwards a number of times with ~<num>
