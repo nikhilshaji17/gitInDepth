@@ -276,3 +276,12 @@ Detaching HEAD just means attaching it to a commit instead of a branch. branch =
 Relative commits are powerful, but we will introduce two simple ones here:
   Moving upwards one commit at a time with ^
   Moving upwards a number of times with ~<num>
+
+Git reset and revert:
+  git reset: will move a branch backwards as if the commit had never been made in the first place. 
+    Use in local branches.
+  
+  git revert: introduces changes -- it just happens to introduce changes that exactly reverses the previous commit. 
+    Use if you need to share this changes in a group repo
+
+  
